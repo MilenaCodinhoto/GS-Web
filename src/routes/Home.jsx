@@ -60,12 +60,59 @@ const Home = () => {
                 </section>
                 
                 <section className="noticias-card">
-                    <h2>NOTICIA</h2>
-                    <img className='notice-image' src={ImageNotice} alt="Imagem Noticia" />
-                    <img className='notice-image' src={ImageNoticeTwo} alt="Imagem Noticia" />
-                    <img className='notice-image' src={ImageNoticeThree} alt="Imagem Noticia" />
-                    <img className='notice-image' src={ImageNoticeFour} alt="Imagem Noticia" />
+                    <h2>NOTÍCIAS</h2>
+                    <div className="notice-container">
+                        <div className="notice-info">
+                            <img className="notice-image" src={ImageNotice} alt="Imagem Notícia" />
+                            <div className="notice-overlay">
+                                <h3 className="notice-title">
+                                    Data centers movimentam R$ 7,7 bi em contratos de energia renovável no Brasil
+                                </h3>
+                                <p className="notice-description">
+                                    Montante corresponde a 330 MWmédios negociados no mercado livre de energia 
+                                    nos últimos três anos, mostra levantamento da CELA.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="notice-info">
+                            <img className="notice-image" src={ImageNoticeTwo} alt="Imagem Notícia" />
+                            <div className="notice-overlay">
+                                <h3 className="notice-title">
+                                Brasil x EUA: O potencial do mercado de energia renovável nas operações de M&As
+                                </h3>
+                                <p className="notice-description">
+                                Medidas estratégicas adotadas contribuem para que o setor se consolide como um dos mais dinâmicos deste século
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="notice-info">
+                            <img className="notice-image" src={ImageNoticeThree} alt="Imagem Notícia" />
+                            <div className="notice-overlay">
+                                <h3 className="notice-title">
+                                Quase metade das empresas ainda não utiliza energias renováveis, diz estudo
+                                </h3>
+                                <p className="notice-description">
+                                As principais empresas do mundo estão aquém do uso de energias renováveis, com quase metade não utilizando eletricidade gerada a partir de fontes limpas, como solar e eólica, mostra um novo relatório divulgado pela CDP
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="notice-info">
+                            <img className="notice-image" src={ImageNoticeFour} alt="Imagem Notícia" />
+                            <div className="notice-overlay">
+                                <h3 className="notice-title">
+                                    Brasil terá plataforma de certificação de energia renovável...
+                                </h3>
+                                <p className="notice-description">
+                                Iniciativa busca aumentar o percentual de energia renovável certificada no Brasil; objetivo é alcançar até 50%...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </section>
+
             </div>
 
         </HomeStyle>
