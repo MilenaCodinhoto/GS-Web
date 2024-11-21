@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { ComparacaoStyle } from '../css/ComparacaoStyle'
-import { energySources } from   '../data';
+import { energySources } from   '../data'
+import Grafico from '../components/Grafico'
 
 const Comparacao = () => {
     const [selectedRegion, setSelectedRegion] = useState("Global");
@@ -72,10 +73,10 @@ const Comparacao = () => {
                 </section>
 
                 <section className="grafico">
-                <div className="grafico-container">
-                    <h3>Gráfico Interativo</h3>
-                    {/* Inserir componente de gráfico aqui */}
-                </div>
+                    <div className="grafico-container">
+                        <h3>Gráfico Interativo</h3>
+                        <Grafico />
+                    </div>
                 </section>
 
                 <section className="simulador">
