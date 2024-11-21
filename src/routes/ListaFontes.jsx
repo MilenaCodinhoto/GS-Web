@@ -18,12 +18,9 @@ function ListaFontes() {
           <div className="card-content">
             <h2>Energia Solar</h2>
             <p>
-              A energia solar é gerada a partir da luz do sol, utilizando painéis
-              fotovoltaicos para converter a radiação solar em eletricidade. É
-              uma fonte limpa, abundante e renovável, ideal para combater as
-              mudanças climáticas.
+            A energia solar é gerada a partir da luz do sol, utilizando painéis fotovoltaicos para converter a radiação solar em eletricidade. É uma fonte limpa, abundante e renovável, ideal para combater as mudanças climáticas.
             </p>
-            <button><Link to="/listafontes/solar">Ver mais</Link></button>
+            <button><Link className='link' to="/listafontes/solar">Ver mais</Link></button>
           </div>
         </div>
 
@@ -35,12 +32,9 @@ function ListaFontes() {
           <div className="card-content">
             <h2>Energia Eólica</h2>
             <p>
-              A energia eólica aproveita a força do vento para movimentar
-              turbinas que geram eletricidade. É uma das fontes de energia
-              renovável mais promissoras, com baixo impacto ambiental e grande
-              potencial de produção.
+            A energia eólica aproveita a força do vento para movimentar turbinas que geram eletricidade. É uma das fontes de energia renovável mais promissoras, com baixo impacto ambiental e grande potencial de produção em áreas com ventos fortes.
             </p>
-            <button><Link to="/listafontes/eolica">Ver mais</Link></button>
+            <button><Link className='link' to="/listafontes/eolica">Ver mais</Link></button>
           </div>
         </div>
 
@@ -52,11 +46,9 @@ function ListaFontes() {
           <div className="card-content">
             <h2>Energia Hidráulica</h2>
             <p>
-              A energia hidráulica utiliza o movimento da água, geralmente em
-              rios ou represas, para gerar eletricidade. É uma das formas mais
-              eficientes de energia renovável.
+            A energia hidráulica utiliza o movimento da água, geralmente em rios ou represas, para gerar eletricidade. É uma das formas mais antigas e eficientes de energia renovável, mas pode ter impactos ambientais dependendo da construção das usinas.
             </p>
-            <button><Link to="/listafontes/hidraulica">Ver mais</Link></button>
+            <button><Link className='link' to="/listafontes/hidraulica">Ver mais</Link></button>
           </div>
         </div>
       </div>

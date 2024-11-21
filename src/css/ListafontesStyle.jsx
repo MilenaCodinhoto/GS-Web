@@ -45,9 +45,14 @@ export const ListaFontesStyle=styled.div`
     margin: 0 0 20px;
     }
 
+    .link {
+        text-decoration: none;
+        color: white;
+    }
+
     .card-content button {
+    text-decoration: none;
     background-color: #2b7a3d;
-    color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;

@@ -1,26 +1,21 @@
 import styled from "styled-components";
+import BannerSolar from '../../images/banner-solar.jpg'
 
 const Container = styled.div`
   background-color: #000;
   color: #fff;
   font-family: Arial, sans-serif;
   text-align: center;
-  padding: 20px;
 `;
 
 const MainContent = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 30px;
+  flex-direction: column; /* Alinha itens verticalmente */
+  align-items: center; /* Centraliza no eixo horizontal */
 `;
 
 const LeftSection = styled.div`
-  flex: 1;
-  max-width: 500px;
-  text-align: left;
-  padding: 20px;
+  text-align: center; /* Centraliza os textos */
 
   h2 {
     font-size: 28px;
@@ -28,47 +23,46 @@ const LeftSection = styled.div`
   }
 
   p {
-    margin-top: 10px;
-    line-height: 1.6;
+    max-width: 85rem;
+    text-align: center; /* Centraliza o texto */
+    padding: 20px;
+    margin: 0 auto;
   }
 `;
 
 const RightSection = styled.div`
-  flex: 1;
-  max-width: 500px;
-  text-align: center;
+  width: 100%; /* Permitir que o contêiner da imagem preencha toda a largura */
 
   img {
     width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
+    height: auto; 
   }
 `;
 
 const Section = styled.section`
-  margin-top: 50px;
 
   h3 {
+  padding: 20px;
     font-size: 22px;
-    color: #ffd700;
+    color: #fff;
   }
 
   p {
-    margin-top: 10px;
-    line-height: 1.6;
-    padding: 0 20px;
+    max-width: 85rem;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
   }
 `;
 
 const HighlightSection = styled(Section)`
-  background-color: #111;
+  background-color: #000;
   padding: 20px;
-  margin: 50px 0;
   border-radius: 10px;
 
   h3 {
     font-size: 24px;
-    color: #00ff00;
+    color: #CBE86A;
   }
 
   a {
@@ -86,50 +80,44 @@ const HighlightSection = styled(Section)`
   }
 `;
 
+
 function DetalhesSolar() {
   return (
     <Container>
       <MainContent>
         <LeftSection>
-          <h2>Energia Solar</h2>
+        <RightSection>
+          <img src= {BannerSolar} alt="Energia Solar" />
+        </RightSection>
           <p>
-            A energia solar fotovoltaica é capturada por meio de células solares (ou painéis solares) que convertem a luz do sol em eletricidade. O processo começa quando os fótons da luz solar atingem a célula solar e excitam os elétrons de um material semicondutor, como o silício, criando uma corrente elétrica.
-          </p>
-          <p>
-            Além disso, a energia solar térmica usa coletores solares para aquecer água ou outro fluido, que pode ser utilizado para aquecimento ou até para geração de eletricidade em sistemas de energia solar concentrada.
+          A energia solar fotovoltaica é capturada por meio de células solares (ou painéis solares) que convertem a luz do sol em eletricidade. O processo começa quando os fotões da luz solar atingem a célula solar e excita os elétrons de um material semicondutor, como o silício, criando uma corrente elétrica. Essa corrente é então direcionada para um inversor, que converte a corrente contínua em corrente alternada, utilizável para alimentar residências e empresas.
+          Além disso, a energia solar térmica usa coletores solares para aquecer água ou outro fluido, que pode ser utilizado para aquecimento ou até para geração de eletricidade em sistemas de energia solar concentrada.
           </p>
         </LeftSection>
-        <RightSection>
-          <img src="https://via.placeholder.com/400x300" alt="Energia Solar" />
-        </RightSection>
       </MainContent>
 
       <Section>
         <h3>Benefícios</h3>
         <p>
-          A energia solar traz diversos benefícios para o meio ambiente e a sociedade. Reduz as emissões de gases de efeito estufa, contribui para a mitigação das mudanças climáticas e é uma fonte renovável e inesgotável.
-        </p>
+        A energia eólica traz diversos benefícios para o meio ambiente e a sociedade. Um dos principais é a ausência de emissões de gases de efeito estufa durante a geração de eletricidade, contribuindo para a mitigação das mudanças climáticas. Além disso, por ser uma fonte natural e renovável, o vento é praticamente inesgotável, tornando a energia eólica uma solução sustentável a longo prazo. A flexibilidade dessa tecnologia também é notável: as turbinas podem ser instaladas em pequena escala, atendendo comunidades locais, ou em larga escala, como em parques eólicos, diversificando a matriz energética. Por fim, os avanços tecnológicos reduziram significativamente os custos de geração, tornando-a uma alternativa competitiva frente aos combustíveis fósseis.        </p>
       </Section>
 
       <Section>
         <h3>Impactos Ambientais</h3>
         <p>
-          Apesar de ser uma fonte renovável, a energia solar apresenta desafios, como a fabricação de painéis solares que pode gerar resíduos tóxicos e o impacto em grandes áreas de terra.
-        </p>
+        A energia solar, embora seja uma fonte renovável e limpa, apresenta alguns impactos ambientais que devem ser considerados. A fabricação dos painéis solares pode gerar efeitos negativos devido à extração de minerais e ao uso de produtos químicos em seu processo de produção. Além disso, ao final da vida útil dos painéis, que geralmente dura entre 20 e 25 anos, o descarte inadequado pode resultar em resíduos tóxicos, embora tecnologias de reciclagem estejam sendo desenvolvidas para minimizar esse problema. Outro ponto relevante é o uso de grandes áreas de terra para a instalação de fazendas solares, o que pode interferir em ecossistemas locais, ainda que o impacto seja relativamente menor quando comparado a outras formas de geração de energia.        </p>
       </Section>
 
       <Section>
         <h3>Acessibilidade em Diferentes Regiões</h3>
         <p>
-          A energia solar é eficaz em regiões com boa incidência de luz solar, como áreas tropicais e desérticas. Tecnologias modernas tornam viável sua utilização em climas variados.
-        </p>
+        A energia solar é eficaz principalmente em áreas com boa incidência de luz solar, como regiões tropicais e desérticas. Países como o Brasil, Índia e partes do Oriente Médio têm um grande potencial solar. Mesmo em países com menor incidência de luz solar, os avanços tecnológicos tornaram a energia solar uma opção viável em climas variados.        </p>
       </Section>
 
       <HighlightSection>
         <h3>Explore as Diferenças e Tome uma Decisão Consciente!</h3>
         <p>
-          Cada fonte de energia tem seus próprios benefícios e desafios. Compare suas opções para encontrar a que melhor atende às suas necessidades e contribua para um futuro sustentável.
-        </p>
+        Você sabia que cada fonte de energia tem seus próprios benefícios e desafios? A energia solar é limpa e acessível, mas exige espaço e cuidados com o descarte dos painéis. Já a energia eólica é sustentável e econômica, mas pode impactar a fauna e a paisagem. E a hidráulica, com sua alta capacidade de geração, também traz questões ambientais importantes, como a submersão de terras e emissões de metano em áreas tropicais.        </p>
         <a href="/comparacao">Acesse agora a nossa Página de Comparação</a>
       </HighlightSection>
     </Container>
