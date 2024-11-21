@@ -11,8 +11,8 @@ const Nav =()=>{
             </div>
             <ul className="nav-menu">
               <li className="menu-item"><Link to="/">Home</Link></li>
-              <li className="menu-item"><Link to="/sobre">Lista fontes</Link></li>
-              <li className="menu-item"><Link to="/solucao">Comparação</Link></li>
+              <li className="menu-item"><Link to="/listafontes">Lista fontes</Link></li>
+              <li className="menu-item"><Link to="/comparacao">Comparação</Link></li>
             </ul>
           </header>
           </NavStyle>
