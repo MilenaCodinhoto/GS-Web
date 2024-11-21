@@ -7,6 +7,9 @@ import ListaFontes from './routes/ListaFontes.jsx'
 import Comparacao from './routes/Comparacao.jsx'
 import Error from './routes/Error.jsx'
 import GlobalStyle from './css/GlobalStyle.jsx';
+import DetalhesEolica from "./routes/detalhes/Eolica";
+import DetalhesSolar from "./routes/detalhes/Solar";
+import DetalhesHidraulica from "./routes/detalhes/Hidraulica";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +21,9 @@ const router = createBrowserRouter([
       { path: '/', element: <Home /> },
       { path: '/listafontes', element: <ListaFontes /> },
       { path: '/comparacao', element: <Comparacao /> },
+      { path: '/listafontes/eolica', element: <DetalhesEolica /> },
+      { path: '/listafontes/solar', element: <DetalhesSolar /> },
+      { path: '/listafontes/hidraulica', element: <DetalhesHidraulica /> },
     ],
   },
 ]);

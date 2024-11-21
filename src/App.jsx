@@ -3,6 +3,7 @@ import Footer from './components/Footer';
 import { Outlet } from 'react-router-dom';
 import GlobalStyle from './css/GlobalStyle';
 
+
 function App() {
   
   
