@@ -9,10 +9,10 @@ function App() {
 
   return (
     <>
+      <GlobalStyle />
       <Nav />
       <Outlet />
       <Footer />
-      <GlobalStyle />
       
     </>
   );
