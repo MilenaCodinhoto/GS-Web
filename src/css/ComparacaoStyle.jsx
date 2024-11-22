@@ -13,12 +13,12 @@ export const ComparacaoStyle = styled.div`
 
     h1 {
       font-size: 2.5rem;
-      color: #2d6a4f;
+      color: #CBE86A;
     }
 
     p {
       font-size: 1.2rem;
-      color: #555;
+      color: #fff;
     }
   }
 
@@ -48,8 +48,8 @@ export const ComparacaoStyle = styled.div`
       }
 
       th {
-        background-color: #d8f3dc;
-        color: #081c15;
+        background-color: #132B13;
+        color: #CBE86A;
       }
     }
   }
@@ -59,13 +59,15 @@ export const ComparacaoStyle = styled.div`
 
     h3 {
       font-size: 1.5rem;
-      color: #2d6a4f;
+      text-align: center;
+      color: #fff;
       margin-bottom: 10px;
     }
 
     p {
       font-size: 1rem;
-      color: #333;
+      text-align: center;
+      color: #fff;
     }
   }
 `;

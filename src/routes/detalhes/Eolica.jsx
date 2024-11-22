@@ -1,12 +1,33 @@
 import styled from "styled-components";
-import BannerSolar from '../../images/banner-eolica.jpg'
+import BannerEolica from '../../images/banner-eolica.jpg'
+import ButtonBack from '../../images/botao-voltar.png'
+import { useNavigate } from "react-router-dom"
+
 
 const Container = styled.div`
   background-color: #000;
   color: #fff;
-  font-family: Arial, sans-serif;
   text-align: center;
-`;
+`
+const ButtonBackContainer = styled.div`
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px;
+  z-index: 100;
+  margin-bottom: 80px;
+  padding: 20px;
+  
+.botao-voltar img {
+    width: 50px; /* Largura do botão */
+    height: 50px; 
+    cursor: pointer; 
+    transition: transform 0.2s; 
+
+&:hover {
+      transform: scale(1.1); 
+    }
+}
+`
 
 const MainContent = styled.div`
   display: flex;
@@ -15,31 +36,55 @@ const MainContent = styled.div`
 `;
 
 const LeftSection = styled.div`
-  text-align: center; /* Centraliza os textos */
-
-  h2 {
-    font-size: 28px;
-    color: #00ff00;
-  }
+  text-align: center;
 
   p {
-    max-width: 85rem;
-    text-align: center; /* Centraliza o texto */
+    max-width: 80%;
+    text-align: center;
     padding: 20px;
     margin: 0 auto;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 50%; 
+    height: 2px;
+    background-color: #CBE86A; 
+    margin: 20px auto 0; 
   }
 `;
 
 const RightSection = styled.div`
-  width: 100%; /* Permitir que o contêiner da imagem preencha toda a largura */
-
-  img {
+  .banner{
     width: 100%;
-    height: auto; 
-  }
-`;
+    height: 400px; 
+    overflow: hidden; 
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center; 
+}
+`
 
 const Section = styled.section`
+
+  position: relative;
+  padding-bottom: 20px; 
+  margin-bottom: 40px; 
+  text-align: center;
+
+  &:not(:last-child)::after {
+    content: '';
+    display: block;
+    width: 50%; 
+    height: 2px; 
+    background-color: #CBE86A; 
+    margin: 20px auto 0; 
+  }
 
   h3 {
   padding: 20px;
@@ -48,12 +93,12 @@ const Section = styled.section`
   }
 
   p {
-    max-width: 85rem;
+    max-width: 80%;
     text-align: center;
     padding: 20px;
     margin: 0 auto;
   }
-`;
+`
 
 const HighlightSection = styled(Section)`
   background-color: #000;
@@ -69,25 +114,37 @@ const HighlightSection = styled(Section)`
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #007700;
-    color: #fff;
+    background-color: #132B13;
+    color: #CBE86A;
     text-decoration: none;
     border-radius: 5px;
 
     &:hover {
-      background-color: #00aa00;
+      background-color: #132B13;
     }
   }
-`;
-
+`
 
 function DetalhesEolica() {
+  const navigate = useNavigate()
+
+  const handleBackClick = () => {
+    navigate("/listafontes");
+  }
+
   return (
     <Container>
+      <ButtonBackContainer>
+        <div className="botao-voltar">
+        <img src={ButtonBack} alt="Botão voltar" onClick={handleBackClick}  />
+        </div>
+      </ButtonBackContainer>
       <MainContent>
         <LeftSection>
         <RightSection>
-          <img src= {BannerSolar} alt="Energia Solar" />
+          <div className="banner">
+          <img className="banner-image" src= {BannerEolica} alt="Energia Eólica" />
+          </div>
         </RightSection>
           <p>
           A energia eólica é gerada a partir do movimento do vento, que faz com que as lâminas das turbinas eólicas girem. O movimento das lâminas é convertido em energia mecânica, que, por sua vez, é transformada em eletricidade por um gerador. A quantidade de energia gerada depende da velocidade do vento, e é por isso que as turbinas precisam ser posicionadas em locais onde o vento é constante e forte. O vento movimenta as lâminas, e essa rotação é capturada pelo gerador.

@@ -1,45 +1,90 @@
 import styled from "styled-components";
 import BannerSolar from '../../images/banner-solar.jpg'
+import ButtonBack from '../../images/botao-voltar.png'
+import { useNavigate } from "react-router-dom"
 
 const Container = styled.div`
   background-color: #000;
   color: #fff;
   font-family: Arial, sans-serif;
   text-align: center;
-`;
+`
+const ButtonBackContainer = styled.div`
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px;
+  z-index: 100;
+  margin-bottom: 80px;
+  padding: 20px;
+  
+.botao-voltar img {
+    width: 50px; /* Largura do botão */
+    height: 50px; 
+    cursor: pointer; 
+    transition: transform 0.2s; 
+
+&:hover {
+      transform: scale(1.1); 
+    }
+}
+`
 
 const MainContent = styled.div`
   display: flex;
   flex-direction: column; /* Alinha itens verticalmente */
   align-items: center; /* Centraliza no eixo horizontal */
-`;
+`
 
 const LeftSection = styled.div`
-  text-align: center; /* Centraliza os textos */
-
-  h2 {
-    font-size: 28px;
-    color: #00ff00;
-  }
+  text-align: center;
 
   p {
-    max-width: 85rem;
-    text-align: center; /* Centraliza o texto */
+    max-width: 80%;
+    text-align: center;
     padding: 20px;
     margin: 0 auto;
   }
-`;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 50%; 
+    height: 2px;
+    background-color: #CBE86A; 
+    margin: 20px auto 0; 
+  }
+`
 
 const RightSection = styled.div`
-  width: 100%; /* Permitir que o contêiner da imagem preencha toda a largura */
-
-  img {
+.banner{
     width: 100%;
-    height: auto; 
-  }
-`;
+    height: 400px; 
+    overflow: hidden; 
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center; 
+}
+`
 
 const Section = styled.section`
+
+  position: relative;
+  padding-bottom: 20px; 
+  margin-bottom: 40px; 
+  text-align: center;
+
+  &:not(:last-child)::after {
+    content: '';
+    display: block;
+    width: 50%; 
+    height: 2px; 
+    background-color: #CBE86A; 
+    margin: 20px auto 0; 
+  }
 
   h3 {
   padding: 20px;
@@ -48,12 +93,12 @@ const Section = styled.section`
   }
 
   p {
-    max-width: 85rem;
+    max-width: 80%;
     text-align: center;
     padding: 20px;
     margin: 0 auto;
   }
-`;
+`
 
 const HighlightSection = styled(Section)`
   background-color: #000;
@@ -69,25 +114,37 @@ const HighlightSection = styled(Section)`
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #007700;
-    color: #fff;
+    background-color: #132B13;
+    color: #CBE86A;
     text-decoration: none;
     border-radius: 5px;
 
     &:hover {
-      background-color: #00aa00;
+      background-color: #132B13;
     }
   }
-`;
-
+`
 
 function DetalhesSolar() {
+  const navigate = useNavigate()
+
+  const handleBackClick = () => {
+    navigate("/listafontes");
+  }
+  
   return (
     <Container>
+      <ButtonBackContainer>
+        <div className="botao-voltar">
+        <img src={ButtonBack} alt="Botão voltar" onClick={handleBackClick}  />
+        </div>
+      </ButtonBackContainer>
       <MainContent>
         <LeftSection>
         <RightSection>
-          <img src= {BannerSolar} alt="Energia Solar" />
+          <div className="banner">
+          <img className="banner-image" src= {BannerSolar} alt="Energia Solar" />
+          </div>
         </RightSection>
           <p>
           A energia solar fotovoltaica é capturada por meio de células solares (ou painéis solares) que convertem a luz do sol em eletricidade. O processo começa quando os fotões da luz solar atingem a célula solar e excita os elétrons de um material semicondutor, como o silício, criando uma corrente elétrica. Essa corrente é então direcionada para um inversor, que converte a corrente contínua em corrente alternada, utilizável para alimentar residências e empresas.
@@ -99,7 +156,7 @@ function DetalhesSolar() {
       <Section>
         <h3>Benefícios</h3>
         <p>
-        A energia eólica traz diversos benefícios para o meio ambiente e a sociedade. Um dos principais é a ausência de emissões de gases de efeito estufa durante a geração de eletricidade, contribuindo para a mitigação das mudanças climáticas. Além disso, por ser uma fonte natural e renovável, o vento é praticamente inesgotável, tornando a energia eólica uma solução sustentável a longo prazo. A flexibilidade dessa tecnologia também é notável: as turbinas podem ser instaladas em pequena escala, atendendo comunidades locais, ou em larga escala, como em parques eólicos, diversificando a matriz energética. Por fim, os avanços tecnológicos reduziram significativamente os custos de geração, tornando-a uma alternativa competitiva frente aos combustíveis fósseis.        </p>
+        A energia eólica traz diversos benefícios para o meio ambiente e a sociedade. Um dos principais é a ausência de emissões de gases de efeito estufa durante a geração de eletricidade, contribuindo para a mitigação das mudanças climáticas. Além disso, por ser uma fonte natural e renovável, o vento é praticamente inesgotável, tornando a energia eólica uma solução sustentável a longo prazo. A flexibilidade dessa tecnologia também é notável: as turbinas podem ser instaladas em pequena escala, atendendo comunidades locais, ou em larga escala, como em parques eólicos, diversificando a matriz energética. Por fim, os avanços tecnológicos reduziram significativamente os custos de geração, tornando-a uma alternativa competitiva frente aos combustíveis fósseis. </p>
       </Section>
 
       <Section>
@@ -124,5 +181,5 @@ function DetalhesSolar() {
   );
 }
 
-export default DetalhesSolar;
+export default DetalhesSolar
 
