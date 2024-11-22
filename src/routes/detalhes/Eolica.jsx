@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom"
 
 
 const Container = styled.div`
-  background-color: #000;
   color: #fff;
   text-align: center;
 `
@@ -18,7 +17,7 @@ const ButtonBackContainer = styled.div`
   padding: 20px;
   
 .botao-voltar img {
-    width: 50px; /* Largura do botão */
+    width: 50px;
     height: 50px; 
     cursor: pointer; 
     transition: transform 0.2s; 
@@ -31,9 +30,9 @@ const ButtonBackContainer = styled.div`
 
 const MainContent = styled.div`
   display: flex;
-  flex-direction: column; /* Alinha itens verticalmente */
-  align-items: center; /* Centraliza no eixo horizontal */
-`;
+  flex-direction: column;
+  align-items: center;
+`
 
 const LeftSection = styled.div`
   text-align: center;
@@ -53,7 +52,7 @@ const LeftSection = styled.div`
     background-color: #CBE86A; 
     margin: 20px auto 0; 
   }
-`;
+`
 
 const RightSection = styled.div`
   .banner{
@@ -89,7 +88,6 @@ const Section = styled.section`
   h3 {
   padding: 20px;
     font-size: 22px;
-    color: #fff;
   }
 
   p {
@@ -101,7 +99,6 @@ const Section = styled.section`
 `
 
 const HighlightSection = styled(Section)`
-  background-color: #000;
   padding: 20px;
   border-radius: 10px;
 

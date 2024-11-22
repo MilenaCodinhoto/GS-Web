@@ -36,4 +36,22 @@ export const NavStyle = styled.header`
   color: #49ae44;
 }
 
+.theme-toggle-button {
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode .header {
+  background-color: #222;
+}
+
+.dark-mode .nav-menu a {
+  color: #fff;
+}
+
+.dark-mode .theme-toggle-button {
+  background-color: #555;
+  color: #fff;
+}
+
 `

@@ -1,4 +1,5 @@
 import { HomeStyle } from '../css/HomeStyle'
+import { Link } from 'react-router-dom'
 import Banner from '../images/banner-renovavel.jpg'
 import CardSolar from '../images/categoria-solar.png'
 import CardEolica from '../images/categoria-eolica.png'
@@ -20,9 +21,15 @@ const Home = () => {
                 </div>
                 
                 <section className="cards">
-                    <img className='info-card' src={CardSolar} alt="Energia Solar" />
-                    <img className='info-card' src={CardEolica} alt="Energia Eólica" />
-                    <img className='info-card' src={CardHidraulica} alt="Energia Hidruálica" />
+                    <Link to="/listafontes/solar">
+                        <img className="info-card" src={CardSolar} alt="Energia Solar" />
+                    </Link>
+                    <Link to="/listafontes/eolica">
+                        <img className="info-card" src={CardEolica} alt="Energia Eólica" />
+                    </Link>
+                    <Link to="/listafontes/hidraulica">
+                        <img className="info-card" src={CardHidraulica} alt="Energia Hidráulica" />
+                    </Link>
                 </section>
 
                 <section className="info">

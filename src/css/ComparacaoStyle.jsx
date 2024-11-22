@@ -18,7 +18,6 @@ export const ComparacaoStyle = styled.div`
 
     p {
       font-size: 1.2rem;
-      color: #fff;
     }
   }
 
@@ -43,7 +42,6 @@ export const ComparacaoStyle = styled.div`
       th, td {
         border: 1px solid #ddd;
         text-align: center;
-        color: #fff;
         padding: 10px;
       }
 
@@ -60,14 +58,12 @@ export const ComparacaoStyle = styled.div`
     h3 {
       font-size: 1.5rem;
       text-align: center;
-      color: #fff;
       margin-bottom: 10px;
     }
 
     p {
       font-size: 1rem;
       text-align: center;
-      color: #fff;
     }
   }
-`;
+`
