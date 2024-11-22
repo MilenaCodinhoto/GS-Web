@@ -2,6 +2,7 @@ import styled from "styled-components";
 import BannerSolar from '../../images/banner-solar.jpg'
 import ButtonBack from '../../images/botao-voltar.png'
 import { useNavigate } from "react-router-dom"
+import { Link } from 'react-router-dom'
 
 const Container = styled.div`
   color: #fff;
@@ -172,7 +173,9 @@ function DetalhesSolar() {
         <h3>Explore as Diferenças e Tome uma Decisão Consciente!</h3>
         <p>
         Você sabia que cada fonte de energia tem seus próprios benefícios e desafios? A energia solar é limpa e acessível, mas exige espaço e cuidados com o descarte dos painéis. Já a energia eólica é sustentável e econômica, mas pode impactar a fauna e a paisagem. E a hidráulica, com sua alta capacidade de geração, também traz questões ambientais importantes, como a submersão de terras e emissões de metano em áreas tropicais.        </p>
-        <a href="/comparacao">Acesse agora a nossa Página de Comparação</a>
+        <Link to="/comparacao">
+        Acesse agora a nossa Página de Comparação
+        </Link>
       </HighlightSection>
     </Container>
   );
