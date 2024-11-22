@@ -60,6 +60,6 @@ const GlobalStyle = createGlobalStyle`
   body.dark-mode a {
     color: var(--link-color-dark);
   }
-`;
+`
 
 export default GlobalStyle
